@@ -1,10 +1,10 @@
 pipeline {
   agent any
   stages {
-    stage('Check/Create ATOP') {
+    stage('') {
       steps {
-        sh 'hasTOP= kubectl get -n sophia2020 deployment | grep atop'
-        sh 'echo $hasTOP'
+        echo 'Hello pipeline'
+        sh 'echo $(kubectl get deployment -n sophia2020 | grep atop)'
       }
     }
 
